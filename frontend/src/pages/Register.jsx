@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FileText, User, Mail, Lock } from "lucide-react";
 import api from "../services/api";
-
+import "./Register.css";
 function Register() {
   const navigate = useNavigate();
 

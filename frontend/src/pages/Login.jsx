@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FileText, Mail, Lock, ArrowRight } from "lucide-react";
 import api from "../services/api";
-
+import "./Login.css"
 function Login() {
   const navigate = useNavigate();
 
