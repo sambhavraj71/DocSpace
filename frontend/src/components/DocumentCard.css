@@ -1,0 +1,166 @@
+/* Document Card */
+.document-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 0;
+}
+
+.document-card:hover {
+  transform: translateY(-4px);
+  border-color: #a5b4fc;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
+}
+
+/* Card Header */
+.document-card > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.document-card > div:first-child > div:first-child {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 10px;
+}
+
+/* Action Buttons */
+.document-card > div:first-child > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.document-card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.document-card > div:first-child button {
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #94a3b8;
+  opacity: 0;
+}
+
+.document-card:hover > div:first-child button {
+  opacity: 1;
+}
+
+.document-card > div:first-child button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.document-card > div:first-child button[title="Delete document"]:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Title */
+.document-card h3 {
+  margin: 0 0 9px;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 650;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Rename Input */
+.document-card input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #60a5fa;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.document-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+/* Rename Buttons */
+.document-card > div:nth-child(2) button {
+  padding: 7px 11px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.document-card > div:nth-child(2) button:first-child {
+  background: #2563eb;
+  color: white;
+}
+
+.document-card > div:nth-child(2) button:last-child {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* Preview */
+.document-card > p {
+  margin: 0 0 20px;
+  min-height: 40px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Footer */
+.document-card > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.document-card > div:last-child span:first-child {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.document-card > div:last-child span:last-child {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .document-card {
+    padding: 16px;
+  }
+
+  .document-card > div:first-child button {
+    opacity: 1;
+  }
+}

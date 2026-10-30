@@ -1,0 +1,585 @@
+
+/* Main Page */
+.editor-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+/* Loading */
+.editor-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+/* Header */
+.editor-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px 24px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.editor-header-left,
+.editor-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #f1f5f9;
+}
+
+.document-title {
+  width: 260px;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.document-title:focus {
+  border-color: #60a5fa;
+}
+
+.document-title:disabled {
+  background: transparent;
+  cursor: default;
+}
+
+.document-subtitle {
+  padding-left: 8px;
+  font-size: 12px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.permission-badge {
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #475569;
+  text-transform: capitalize;
+}
+
+.save-status {
+  font-size: 13px;
+  color: #16a34a;
+}
+
+.save-status.error {
+  color: #dc2626;
+}
+
+/* Share Button */
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Viewer Notice */
+.viewer-notice {
+  max-width: 960px;
+  margin: 20px auto 0;
+  padding: 13px 16px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 14px;
+}
+
+/* Editor Layout */
+.editor-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.document-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* Toolbar */
+.editor-toolbar {
+  position: sticky;
+  top: 65px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toolbar-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.toolbar-btn:hover {
+  background: #f1f5f9;
+}
+
+.toolbar-btn.active {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.toolbar-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 24px;
+  margin: 0 5px;
+  background: #e5e7eb;
+}
+
+/* TipTap Content */
+.document-content {
+  min-height: 600px;
+  padding: 32px 40px;
+  outline: none;
+  color: #1f2937;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.document-content p {
+  margin: 0 0 12px;
+}
+
+.document-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 20px 0 12px;
+}
+
+.document-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 18px 0 10px;
+}
+
+.document-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 16px 0 8px;
+}
+
+.document-content ul,
+.document-content ol {
+  padding-left: 28px;
+  margin: 12px 0;
+}
+
+.document-content ul {
+  list-style-type: disc;
+}
+
+.document-content ol {
+  list-style-type: decimal;
+}
+
+.document-content strong {
+  font-weight: 700;
+}
+
+.document-content em {
+  font-style: italic;
+}
+
+.document-content u {
+  text-decoration: underline;
+}
+
+/* Footer */
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 13px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.editor-footer div {
+  display: flex;
+  gap: 20px;
+}
+
+/* Share Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.share-modal {
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.modal-header p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.close-modal-btn {
+  padding: 7px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover {
+  background: #f1f5f9;
+}
+
+.share-modal form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.share-modal form input,
+.share-modal form select {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  font-size: 14px;
+}
+
+.share-modal form input:focus,
+.share-modal form select:focus {
+  border-color: #3b82f6;
+}
+
+.share-error,
+.share-success {
+  padding: 11px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.share-error {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.share-success {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancel-btn,
+.share-submit-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #475569;
+}
+
+.share-submit-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.share-submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.share-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .editor-header {
+    padding: 12px;
+  }
+
+  .editor-header-left,
+  .editor-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .document-title {
+    width: 190px;
+  }
+
+  .editor-main {
+    padding: 18px 10px;
+  }
+
+  .document-content {
+    padding: 24px 18px;
+    min-height: 450px;
+  }
+
+  .editor-toolbar {
+    padding: 8px;
+  }
+
+  .viewer-notice {
+    margin: 15px 10px 0;
+  }
+}
+/* =====================================
+   DOCSPACE - FIXED EDITOR LAYOUT
+===================================== */
+
+/* Full viewport */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Main editor page */
+.editor-page {
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+/* Top header remains visible */
+.editor-header {
+  flex: 0 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+}
+
+/* Viewer notice */
+.viewer-notice {
+  flex: 0 0 auto;
+}
+
+/* Main area takes remaining height */
+.editor-main {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  padding: 20px 28px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Document card */
+.editor-main .document-card {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  min-height: 0;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* Formatting toolbar stays visible */
+.editor-toolbar {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+
+  padding: 12px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+
+  position: relative;
+  z-index: 5;
+}
+
+/* TipTap EditorContent outer wrapper */
+.document-card > div:not(.editor-toolbar) {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+}
+
+/* Actual editable text area */
+.document-content {
+  min-height: 100%;
+  padding: 45px 65px 70px;
+
+  outline: none;
+  box-sizing: border-box;
+
+  color: #1e293b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Prevent first line from clipping */
+.document-content > :first-child {
+  margin-top: 0;
+}
+
+/* Footer remains visible */
+.editor-footer {
+  flex: 0 0 auto;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  position: relative;
+  z-index: 5;
+}
+
+/* Scrollbar only inside writing area */
+.document-card > div:not(.editor-toolbar)::-webkit-scrollbar {
+  width: 8px;
+}
+
+.document-card > div:not(.editor-toolbar)::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.document-card > div:not(.editor-toolbar)::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.document-card > div:not(.editor-toolbar)::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .editor-main {
+    padding: 10px;
+  }
+
+  .document-content {
+    padding: 25px 20px 45px;
+  }
+
+  .editor-toolbar {
+    padding: 10px;
+    gap: 3px;
+  }
+}
